@@ -10,6 +10,16 @@
 
   <div>Testing</div>
 
-  <script src="https://cdn.jsdelivr.net/gh/pdotdeep1997/chat_widget@main/dist/my-widget.bundle.js"></script>
+  <script>
+    (function() {
+      var script = document.createElement('script');
+      script.src = 'https://cdn.jsdelivr.net/gh/pdotdeep1997/chat_widget@main/dist/my-widget.bundle.js';
+      script.onload = function() {
+        MyWidget.init({ message: 'Hello from MyWidget!' });
+      };
+      document.body.appendChild(script);
+    })();
+  </script>
+
 </body>
 </html>

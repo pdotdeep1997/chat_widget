@@ -9,7 +9,7 @@ function MyWidget() {
   );
 }
 MyWidget.init = (config) => {
-  ReactDOM.render(<MyWidget {...config} />, document.getElementById('my-widget-container'));
+  ReactDOM.render(<MyWidget {...config} />, document.getElementById('body'));
 };
 
 export default MyWidget;
