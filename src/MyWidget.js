@@ -1,15 +1,13 @@
-// MyComponent.js
+// MyWidget.js
 import React from 'react';
+import ReactDOM from 'react-dom';
 
-function MyWidget() {
-  return (
-    <div>
-      <h1>Hello, World!</h1>
-    </div>
-  );
-}
-MyWidget.init = (config) => {
-  ReactDOM.render(<MyWidget {...config} />, document.getElementById('body'));
+const MyWidget = ({ message }) => <div className="my-widget">{message}</div>;
+
+MyWidget.init = () => {
+  const container = document.createElement('div');
+  document.body.appendChild(container);
+  ReactDOM.render(<MyWidget message="Hello from MyWidget!" />, container);
 };
 
 export default MyWidget;
